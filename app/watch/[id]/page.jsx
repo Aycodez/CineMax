@@ -137,7 +137,7 @@ const MoviePage = ({ params }) => {
               <h1 className="text-2xl font-semibold my-3">Movies Like This</h1>
               <div className="grid gap-3 grid-cols-3 lg:grid-cols-5 w-full lg:w-5/6 ">
                 {recommendedMovies?.slice(0, 5).map((movie, i) => (
-                  <Link href={`/watch/${movie._id}`} key={i} className="relative">
+                  <Link href={`/watch/${movie._id}`} key={i} className="relative mb-2">
                     <div className="">
                       <Image
                         src={movie.image}
@@ -150,13 +150,13 @@ const MoviePage = ({ params }) => {
                     <div className="absolute gap-1 top-[75px] flex flex-col items-center">
                       <h1 className="text-lg">
                         {movie.name.length > 10
-                          ? movie.name.slice(0, 9) + "..."
+                          ? movie.name.slice(0, 8) + ".."
                           : movie.name}
                       </h1>
-                      <p className="text-sm text-center">
-                        {movie.detail.slice(0, 30)}
+                      <p className="text-[0.7rem] lg:text-sm text-center">
+                        {movie.detail.slice(0, 25)}
                       </p>
-                      <button className="px-3 py-[4px] text-sm  bg-transparent border-2">
+                      <button className="px-2 py-[2px] lg:px-3 lg:py-2 text-sm  bg-transparent border-2">
                         WATCH NOW
                       </button>
                     </div>
