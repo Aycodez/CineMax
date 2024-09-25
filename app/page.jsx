@@ -1,11 +1,11 @@
 'use client'
-import Header from '@/pages/Home/Header';
-import ShowsForYou from '@/pages/Home/ShowsForYou';
-import Streaming from '@/pages/Home/Streaming';
-import TvShows from '@/pages/Home/TvShows';
-import MovieCard from '../pages/Home/MovieCard';
-import FeaturedMovies from '@/pages/Home/FeaturedMovies';
-import NewMovies from '@/pages/Home/NewMovies';
+import Header from '@/Apppages/Home/Header';
+import ShowsForYou from '@/Apppages/Home/ShowsForYou';
+import Streaming from '@/Apppages/Home/Streaming';
+import TvShows from '@/Apppages/Home/TvShows';
+import MovieCard from '../Apppages/Home/MovieCard';
+import FeaturedMovies from '@/Apppages/Home/FeaturedMovies';
+import NewMovies from '@/Apppages/Home/NewMovies';
 import { useGetAllMoviesQuery,
    useGetNewMoviesQuery, 
    useGetRandomMoviesQuery, useGetSpecificMovieQuery, useGetTopMoviesQuery } from '@/redux/api/movie';

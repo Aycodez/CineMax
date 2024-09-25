@@ -9,7 +9,7 @@ const nextConfig = {
             hostname: 'static0.gamerantimages.com'
         },
         {
-            hostname: 'https://m.media-amazon.com'
+            hostname: 'm.media-amazon.com'
         }
     ]
    }

@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import HeaderMovieCard from '@/pages/Home/HeaderMovieCard'
+import HeaderMovieCard from '@/Apppages/Home/HeaderMovieCard'
 import NextArrow from './NextArrow'
 import PrevArrow from './PrevArrow'
 

@@ -6,7 +6,7 @@ import {getServerSession} from 'next-auth'
 import ReactToast from "@/components/react-toast";
 import StoreProvider from "@/redux/StoreProvider"
 import Navbar from "@/components/Navbar";
-import Footer from '@/pages/Home/Footer'
+import Footer from '@/components/Footer'
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

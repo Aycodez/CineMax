@@ -1,6 +1,6 @@
 "use client";
-import Results from "@/pages/Movies/Results";
-import { useAppSelector } from "@/redux/hooks";
+import Results from "@/Apppages/Movies/Results";
+
 const Movies = () => {
   
   return (

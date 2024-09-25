@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const StreamingMovieCard = ({ movie }) => {
   return (
-    <div className="relative lg:w-full size-[250px] lg:h-[250px] flex-col flex lg:justify-end  my-3 hover:brightness-75 duration-300 ease-in-out">
+    <div className="relative w-full h-[250px] flex-col flex lg:justify-end  my-3 hover:brightness-75 duration-300 ease-in-out">
       <div className="absolute -z-10 h-full w-full text-white">
         <Image
           src={movie?.image}

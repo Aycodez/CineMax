@@ -1,5 +1,4 @@
-import GenreList from '@/pages/Admin/GenreList'
-import React from 'react'
+import GenreList from '@/Apppages/Admin/GenreList'
 
 const AdminGenres = () => {
   return (

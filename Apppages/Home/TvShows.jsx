@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
 import ForYouMovieCard from "./ForYouMovieCard";
-// import { useGetSpecificMovieQuery } from '@/redux/api/movie';
+import { useGetSpecificMovieQuery } from '@/redux/api/movie';
 
-const TvShows = ({ movies, coverPoster }) => {
-  // const {data: coverPoster} = useGetSpecificMovieQuery("66e4c995caae3a2df54f561b")
+const TvShows = ({ movies}) => {
+  
+  const {data: coverPoster} = useGetSpecificMovieQuery("66f3016aecdbe72bb9fd6c1c")
   return (
     <>
       <section className="relative w-full h-[400px] lg:h-screen">
         <div className="absolute -z-10 w-full h-full text-white">
-          <Image
+          <img
             src={coverPoster?.backgroundImage}
-            fill
             className="w-full brightness-90 h-full object-cover"
             alt="Image of movie"
           />

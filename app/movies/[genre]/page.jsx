@@ -1,5 +1,5 @@
 "use client";
-import Results from "@/pages/Movies/Results";
+import Results from "@/Apppages/Movies/Results";
 
 const MovieResults = ({ params }) => {
   return (

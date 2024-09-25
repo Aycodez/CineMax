@@ -3,11 +3,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import StreamingMovieCard from "@/pages/Home/StreamingMovieCard";
+import StreamingMovieCard from "@/Apppages/Home/StreamingMovieCard";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 const NextArrow = ({ onClick }) => {
   return (
-    <div className="absolute z-50 top-[170px] lg:top-[130px] mb-5 left-[-90px] lg:left-[-190px]">
+    <div className="absolute z-50 top-[170px] lg:top-[130px] mb-5 left-[-70px] lg:left-[-190px]">
       <button
         onClick={onClick}
         className="border-[3px] transition-all ease-in-out duration-500 hover:text-gray-800 hover:border-gray-800 border-gray-500 text-gray-500 rounded-full p-1"
@@ -19,7 +19,7 @@ const NextArrow = ({ onClick }) => {
 };
 const PrevArrow = ({ onClick }) => {
   return (
-    <div className="absolute  z-50 top-[170px] lg:top-[130px] mb-5 left-[-140px] lg:left-[-240px]">
+    <div className="absolute  z-50 top-[170px] lg:top-[130px] mb-5 left-[-120px] lg:left-[-240px]">
       <button
         onClick={onClick}
         className="border-[3px] transition-all ease-in-out duration-500 hover:border-gray-800 hover:text-gray-800 border-gray-500 text-gray-500 rounded-full p-1"

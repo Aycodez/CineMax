@@ -3,35 +3,36 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import StreamingMovieCard from "@/pages/Home/StreamingMovieCard";
+import StreamingMovieCard from "@/Apppages/Home/StreamingMovieCard";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
-const NextArrow = ({ onClick }) => {
-  return (
-    <div className="absolute z-50 top-[140px] lg:top-[160px] right-[-50px] lg:right-[-50px]">
-      <button
-        onClick={onClick}
-        className="border-[3px] transition-all ease-in-out duration-500 hover:text-gray-800 hover:border-gray-800 border-gray-500 text-gray-500 rounded-full p-1"
-      >
-        <GrFormPreviousLink size={25} />
-      </button>
-    </div>
-  );
-};
 
-const PrevArrow = ({ onClick }) => {
-  return (
-    <div className="absolute  z-50 top-[140px] lg:top-[160px] lg:mb-5 mb-2 right-[-100px] lg:right-[-100px]">
-      <button
-        onClick={onClick}
-        className="border-[3px] transition-all ease-in-out duration-500 hover:border-gray-800 hover:text-gray-800 border-gray-500 text-gray-500 rounded-full p-1"
-      >
-        <GrFormNextLink size={25} />
-      </button>
-    </div>
-  );
-};
 
 const StreamingSlider = ({ slides, movies }) => {
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="absolute z-50 top-[140px] lg:top-[160px] right-[-50px] lg:right-[-50px]">
+        <button
+          onClick={onClick}
+          className="border-[3px] transition-all ease-in-out duration-500 hover:text-gray-800 hover:border-gray-800 border-gray-500 text-gray-500 rounded-full p-1"
+        >
+          <GrFormPreviousLink size={25} />
+        </button>
+      </div>
+    );
+  };
+  
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="absolute  z-50 top-[140px] lg:top-[160px] lg:mb-5 mb-2 right-[-100px] lg:right-[-100px]">
+        <button
+          onClick={onClick}
+          className="border-[3px] transition-all ease-in-out duration-500 hover:border-gray-800 hover:text-gray-800 border-gray-500 text-gray-500 rounded-full p-1"
+        >
+          <GrFormNextLink size={25} />
+        </button>
+      </div>
+    );
+  };
   const settings = {
     arrows: true,
     infinite: false,
@@ -68,7 +69,7 @@ const StreamingSlider = ({ slides, movies }) => {
     ],
   };
   return (
-    <div className="relative w-2/3 lg:w-[90%] pr-2 lg:pr-14">
+    <div className="relative w-3/5 lg:w-[90%] pr-2 lg:pr-14">
       <Slider {...settings}>
         {movies?.map((movie, index) => (
           <StreamingMovieCard key={index} movie={movie} />

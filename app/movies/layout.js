@@ -1,5 +1,5 @@
 "use client";
-import Categories from "@/pages/Movies/Categories";
+import Categories from "@/Apppages/Movies/Categories";
 import { usePathname } from "next/navigation";
 
 const Layout = ({ children }) => {

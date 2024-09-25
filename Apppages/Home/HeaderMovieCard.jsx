@@ -3,7 +3,7 @@ import { ImYoutube } from "react-icons/im";
 import Link from 'next/link'
 
 const HeaderMovieCard = ({ movie }) => {
-  // console.log(movie)
+
   return (
     <div className="relative w-full h-[450px] lg:h-screen">
       <div className="absolute -z-10 pt-10 lg:pt-12 w-full h-full text-white">
@@ -14,7 +14,7 @@ const HeaderMovieCard = ({ movie }) => {
         />
       </div>
       <div className="wrapper mx-auto h-full flex justify-between gap-10 max-w-[1200px]">
-        <div className="pl-10 h-full flex-col flex pt-[12rem] lg:pt-[15rem] gap-4">
+        <div className="pl-10 h-full flex-col flex pt-[12rem] lg:pt-[17rem] gap-4">
           <div className="flex gap-2">
             <span className="border-2 border-red-600"></span>
             <p className="text-gray-400 lg:text-2xl">NEW RELEASES</p>

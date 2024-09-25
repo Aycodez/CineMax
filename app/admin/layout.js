@@ -1,6 +1,6 @@
 "use client";
-import AdminNavBar from "@/pages/Admin/AdminNavBar";
-import AdminPanel from "@/pages/Admin/AdminPanel";
+import AdminNavBar from "@/Apppages/Admin/AdminNavBar";
+import AdminPanel from "@/Apppages/Admin/AdminPanel";
 import { useState } from "react";
 const Layout = ({ children }) => {
   const [toggle, setToggle] = useState(false)
