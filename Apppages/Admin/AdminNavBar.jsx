@@ -4,7 +4,7 @@ import { IoMdNotifications } from "react-icons/io";
 import Image from "next/image";
 import avatar from "@/public/man.png";
 
-const AdminNavBar = ({toggle, setToggle}) => {
+const AdminNavBar = ({ toggle, setToggle }) => {
   return (
     <div className="fjc w-full p-5">
       <button onClick={() => setToggle(!toggle)} className="p-2 bg-gray-800/5 rounded-md">
@@ -12,7 +12,7 @@ const AdminNavBar = ({toggle, setToggle}) => {
       </button>
       <input
         type="search"
-        className="bg-transparent outline-none rounded-md border p-1 w-48 lg:w-64 text-black"
+        className="bg-transparent outline-none rounded-md border p-1 w-[10rem] lg:w-64 text-black"
         placeholder="Search for Movies here..."
       />
       <div className="fc">

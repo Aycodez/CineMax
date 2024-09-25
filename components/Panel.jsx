@@ -4,18 +4,18 @@ import { adminDashboardOptions } from "@/utils/constants";
 import Link from "next/link";
 import { IoIosCloseCircle } from 'react-icons/io';
 
-const Panel = ({toggle, setToggle}) => {
+const Panel = ({ toggle, setToggle }) => {
   return (
     <div className='h-full w-full'>
-        <div className="fc">
+      <div className="fc">
         <TbMovie size={30} className="text-red-600" />
-        <h1 className="lg:head-title text-xl text-white">CINEMAX</h1>
+        <Link href='/' className="lg:head-title text-xl text-white">CINEMAX</Link>
       </div>
       <div className="w-full border-b-2 my-3 border-b-red-600" />
       <div className="w-full">
-        {toggle && <button className='text-red-600 w-full flex items-center justify-center' onClick={() => setToggle(!toggle)}><IoIosCloseCircle size={30}/></button>}
+        {toggle && <button className='text-red-600 w-full flex items-center justify-center' onClick={() => setToggle(!toggle)}><IoIosCloseCircle size={30} /></button>}
         {adminDashboardOptions.map((options, index) => (
-          <Link
+          <Link onClick={() => setToggle(!toggle)}
             href={options.link}
             key={index}
             className="fc p-2 w-full hover:bg-red-600 
@@ -29,7 +29,7 @@ const Panel = ({toggle, setToggle}) => {
           </Link>
         ))}
       </div>
-      </div>
+    </div>
   )
 }
 

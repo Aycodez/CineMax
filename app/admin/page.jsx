@@ -15,7 +15,7 @@ import { FaUserFriends } from "react-icons/fa";
 const Dashboard = () => {
   const { data: movies, isLoading } = useGetAllMoviesQuery();
   const { data: genres } = useFetchGenresQuery();
-  const {data: users} = useGetUsersQuery();
+  const { data: users } = useGetUsersQuery();
   const chartItems = [
     {
       name: "Total Movies",
@@ -43,7 +43,7 @@ const Dashboard = () => {
     },
   ];
   return (
-    <section className="p-5 w-full">
+    <section className="p-1 lg:p-5 w-full">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 px-2 lg:px-5 py-2">
         {chartItems.map((item, index) => (
           <AdminCard
@@ -62,7 +62,7 @@ const Dashboard = () => {
         </div>
       ) : (
         <>
-          <div className="fjc px-2 lg:px-5 mt-2 mb-5">
+          <div className="fjc px-1 lg:px-5 mt-2 mb-5">
             <div className="fc">
               <div className="lg:h-8 h-4 rounded-lg w-2 border bg-red-600" />
               <h1 className="lg:text-3xl text-xl font-bold">
@@ -100,7 +100,7 @@ const Dashboard = () => {
                     </p>
                   </div>
 
-                  <div className="mt-3 text-[0.8rem] fc">
+                  <div className="mt-3 text-[0.7rem] fc">
                     <Link
                       href={`/admin/movies/update/${movie._id}`}
                       className="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-2 lg:px-4  rounded-lg"

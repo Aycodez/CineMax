@@ -31,7 +31,7 @@ const AdminMoviesList = () => {
 
         <Link
           href="/admin/movies/create"
-          className="bg-red-500 hover:bg-red-700 font-semibold text-white py-2 px-2 lg:px-3 shadow-md shadow-red-600 rounded-3xl"
+          className="bg-red-500 hover:bg-red-700 font-semibold text-[0.7rem] lg:text-sm text-white py-2 px-2 lg:px-3 shadow-md shadow-red-600 rounded-xl"
         >
           Add movie
         </Link>
@@ -84,8 +84,7 @@ const AdminMoviesList = () => {
           disabled={currentPage == 1}
           onClick={() =>
             router.push(
-              `/admin/movies/?page=${
-                Number(currentPage) - 1
+              `/admin/movies/?page=${Number(currentPage) - 1
               }&per_page=${itemsPerPage}`
             )
           }
@@ -99,8 +98,7 @@ const AdminMoviesList = () => {
           disabled={currentPage == Math.ceil(movies?.length / itemsPerPage)}
           onClick={() =>
             router.push(
-              `/admin/movies/?page=${
-                Number(currentPage) + 1
+              `/admin/movies/?page=${Number(currentPage) + 1
               }&per_page=${itemsPerPage}`
             )
           }
