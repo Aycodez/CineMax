@@ -59,7 +59,7 @@ const Mobilemenu = ({ setToggle }) => {
       </button>
       <button
         onClick={() => setToggle(false)}
-        className="pb-2"
+        className="border-b-2 border-gray-600 pb-4"
       >
         <Link
           href="/"
@@ -68,10 +68,23 @@ const Mobilemenu = ({ setToggle }) => {
           Blog
         </Link>
       </button>
-      {session ? (
+      {session?.user.role == 'admin' ? (
         <button
           onClick={() => setToggle(false)}
-          className="border-b-2 border-gray-600 pb-4"
+          className="pb-4"
+        >
+          <Link
+            href="/admin"
+            className=" font-bold text-2xl hover:text-red-600 duration-300 ease-in-out"
+          >
+            Dashboard
+          </Link>
+        </button>
+
+      ) : (
+        <button
+          onClick={() => setToggle(false)}
+          className="pb-4"
         >
           <Link
             href="/"
@@ -80,8 +93,7 @@ const Mobilemenu = ({ setToggle }) => {
             Edit Profile
           </Link>
         </button>
-
-      ) : (null)}
+      )}
 
 
     </div>
