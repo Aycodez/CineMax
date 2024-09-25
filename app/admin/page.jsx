@@ -103,13 +103,13 @@ const Dashboard = () => {
                   <div className="mt-3 text-[0.7rem] fc">
                     <Link
                       href={`/admin/movies/update/${movie._id}`}
-                      className="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-2 lg:px-4  rounded-lg"
+                      className="bg-red-600 hover:bg-red-900 text-white font-bold py-1 px-2 lg:px-4  rounded-lg"
                     >
                       Update Movie
                     </Link>
                     <Link
                       href={`/admin/movies/delete/${movie._id}`}
-                      className="bg-[#D3D3D3] hover:bg-slate-600 border border-black font-bold py-2 px-2 lg:px-4 rounded-lg"
+                      className="bg-[#D3D3D3] hover:bg-slate-600 border border-black font-bold py-2 px-1 lg:px-4 rounded-lg"
                     >
                       Delete Movie
                     </Link>

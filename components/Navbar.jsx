@@ -47,7 +47,7 @@ const Navbar = () => {
   };
   return (
     hide && (
-      <nav className="bg-black/40 w-screen backdrop-blur-lg z-[99] fixed p-2">
+      <nav className="bg-black/40 w-screen backdrop-blur-lg z-[995] fixed p-2">
         <div className="flex justify-between items-center md:hidden">
           <div className="flex text-red-600 gap-3 items-center ">
             <BiSolidMoviePlay size={30} />
@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {toggle && (
             <div onClick={() => setToggle(false)}
-              className="mobile-menu mt-[40rem] h-screen pt-[10rem] text-red-500 z-40 lg:hidden backdrop-blur-md fixed ml-[-50px] w-full py-4
+              className="mobile-menu mt-[40rem] h-screen pt-[10rem] text-red-500 z-[999] lg:hidden backdrop-blur-md fixed ml-[-50px] w-full py-4
                         bg-white/80 transition-all duration-1000 ease-in-out"
             >
               <Mobilemenu setToggle={setToggle} />

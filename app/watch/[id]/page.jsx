@@ -89,7 +89,7 @@ const MoviePage = ({ params }) => {
                 <div className="flex items-center justify-center lg:justify-normal my-3 gap-4">
                   <p className="">{movie?.year}</p>
                   <p>{movie?.duration}</p>
-                  <p>{movie?.genre}</p>
+                  <p>{movie?.genre.join(',')}</p>
                 </div>
                 <p className="lg:w-[70%] lg:text-left text-center text-pretty">
                   {movie?.detail}
