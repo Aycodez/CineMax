@@ -18,7 +18,7 @@ export default function Home() {
   const tvshows = data?.slice(0, 10)
   const {data: coverPhoto} = useGetSpecificMovieQuery('66e637a8417920bc6a71ce95')
   return (
-    <div>
+    <div className='w-full overflow-x-hidden'>
       <Header movies={randomMovies}/>  
       <ShowsForYou movies={newMovies}/>
       <Streaming movies={topMovies}/>

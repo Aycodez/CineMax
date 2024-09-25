@@ -24,7 +24,6 @@ export default async function RootLayout({ children }) {
             <SessionProvider session={session}>
                 <Navbar/>                            
                 {children}
-
                 <ReactToast/>
                 <Footer/>                      
             </SessionProvider>

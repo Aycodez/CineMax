@@ -28,11 +28,11 @@ const Navbar = () => {
     pathName != "/login" &&
     pathName != "/register" &&
     !pathName.includes("/admin");
-  
+
   const dispatch = useAppDispatch();
   const { moviesFilter } = useAppSelector((state) => state.movies);
   const { data, isLoading } = useGetAllMoviesQuery();
- 
+
   useEffect(() => {
     dispatch(setFilteredMovies(data || []));
     if (!isLoading) console.log("Fetched Data..... (Navbar Component)");
@@ -47,25 +47,42 @@ const Navbar = () => {
   };
   return (
     hide && (
-      <nav className="bg-black/40 backdrop-blur-lg z-[99] fixed w-full py-1 px-2">
-        <div className="w-full flex justify-between items-center md:hidden">
+      <nav className="bg-black/40 w-screen backdrop-blur-lg z-[99] fixed p-2">
+        <div className="flex justify-between items-center md:hidden">
           <div className="flex text-red-600 gap-3 items-center ">
             <BiSolidMoviePlay size={30} />
-            <Link href="/" className="text-white font-bold text-3xl">
+            <Link href="/" className="text-white font-bold text-2xl">
               CineMax
             </Link>
           </div>
-          <button
-            onClick={() => setToggle(!toggle)}
-            className="hamburger text-red-600 pr-3 "
-          >
-            <RxHamburgerMenu size={35} />
-          </button>
+          <div className="flex gap-2 text-white">
+            {session ? (
+              <button className="bg-transparent hover:bg-[gray] rounded-md font-semibold p-2 text-sm"
+                onClick={() => signOut()}>SIGN OUT
+              </button>
+            ) : (
+              <>
+                <Link className="bg-red-600 hover:bg-[red] text-sm font-semibold p-2 rounded-md"
+                  href="/login">SIGN IN</Link>
+                <Link className="bg-transparent hover:bg-[gray] rounded-md font-semibold py-2 text-sm "
+                  href="/register">REGISTER
+                </Link>
+              </>
+            )}
+
+
+            <button
+              onClick={() => setToggle(!toggle)}
+              className="hamburger text-red-600"
+            >
+              <RxHamburgerMenu size={30} />
+            </button>
+          </div>
 
           {toggle && (
-            <div
-              className="mobile-menu mt-[32rem] pt-3 z-40 lg:hidden backdrop-blur-lg fixed ml-[-30px] w-full pl-10 py-4
-                        bg-black/40 transition-all duration-1000 ease-in-out"
+            <div onClick={() => setToggle(false)}
+              className="mobile-menu mt-[40rem] h-screen pt-[20rem] text-red-500 z-40 lg:hidden backdrop-blur-md fixed ml-[-50px] w-full py-4
+                        bg-white/80 transition-all duration-1000 ease-in-out"
             >
               <Mobilemenu setToggle={setToggle} />
             </div>
@@ -138,11 +155,11 @@ const Navbar = () => {
               </div>
             </form>
             {session ? (
-                session?.user.role == 'admin' ? (
+              session?.user.role == 'admin' ? (
                 <Link href="/admin" className="flex items-center text-white bg-green-600 border-2 border-white font-bold rounded-lg text-center px-4 py-2 gap-2 ">
-                   Dashboard <FaArrowRight size={15} />{" "} 
+                  Dashboard <FaArrowRight size={15} />{" "}
                 </Link>
-                ):(
+              ) : (
                 <button
                   onClick={() => setOpen(!open)}
                   className="text-white hover:bg-red-500 active:bg-red-500 font-semibold flex gap-2 px-3 py-2 rounded-2xl"
@@ -151,13 +168,11 @@ const Navbar = () => {
                     src={avatar}
                     width={40}
                     height={40}
-                    // onClick={() => setOpen(true)}
                     className="size-[30px]"
                   />
-                  {/* {session.user?.username.split(" ")[0]} */}
                 </button>)
-              
-              
+
+
             ) : (
               <div className="flex gap-2 text-white">
                 <button

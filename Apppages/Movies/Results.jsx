@@ -6,14 +6,9 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import { TbMenuDeep } from "react-icons/tb";
 import ColumnView from "./ColumnView";
 import RowView from "./RowView";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import {
-  setMoviesFilter,
-  setFilteredMovies,
-} from "@/redux/features/movies/moviesSlice";
-import { useEffect } from "react";
+import { useAppSelector } from "@/redux/hooks";
 
-const Results = ({ genre }) => {
+const Results = () => {
   const [view, setView] = useState("flex");
   const viewOptions = [
     "Latest",
@@ -23,20 +18,7 @@ const Results = ({ genre }) => {
     "Menu Order",
   ];
 
-  const dispatch = useAppDispatch();
   const { filteredMovies } = useAppSelector((state) => state.movies);
-  useEffect(() => {
-    if (genre) {
-      let filterByGenres = filteredMovies.filter((movie) =>
-        movie.genre.includes(genre)
-      );
-
-      dispatch(setMoviesFilter({ selectedGenre: genre }));
-      dispatch(setFilteredMovies(filterByGenres));
-
-      return;
-    }
-  }, [genre]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

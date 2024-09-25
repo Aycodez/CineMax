@@ -55,15 +55,15 @@ const Login = () => {
 
   return (
     sessionStatus != "authenticated" && (
-      <div className="h-screen w-full flex items-center justify-center overflow-hidden">
-        <div className="w-full h-full absolute -z-10">
+      <div className="h-screen overflow-y-hidden w-full flex items-center justify-center">
+        <div className="w-full absolute -z-10">
           <img
             src="https://i.redd.it/zjgs096khv591.jpg"
-            className="w-full h-full object-cover lg:object-fill"
+            className="w-full h-screen object-cover lg:object-fill"
           />
         </div>
-        <div className="backdrop-blur-sm bg-black/90  text-white p-8 rounded shadow-md w-96">
-          <h2 className="text-5xl font-semibold mb-4">Log In</h2>
+        <div className="backdrop-blur-sm bg-black/90  text-white p-6 lg:p-8 rounded shadow-md w-80 lg:w-96">
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-4">Log In</h2>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
               <div className="mb-4">

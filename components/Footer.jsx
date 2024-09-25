@@ -18,11 +18,11 @@ const Footer = () => {
 
   return (
     hide && (
-      <footer className="bg-[#080b12] pt-5 text-gray-300">
+      <footer className="bg-[#080b12] px-2 pt-5 text-gray-300">
         <div className="wrapper max-w-[1200px] mb-5 mx-auto text-sm">
-          <div className="flex flex-col md:flex-row lg:items-center justify-between px-3 my-3">
+          <div className="flex flex-col md:flex-row lg:items-center justify-between lg:px-3 my-3">
             <h1 className="lg:text-4x text-3xl mb-2">CineMax</h1>
-            <div className="handles flex items-center gap-5 lg:text-sm font-semibold">
+            <div className="handles flex flex-wrap lg:flex-nowrap items-center gap-3 lg:gap-5 text-sm font-semibold">
               <Link className="flex items-center gap-1" href="/">
                 <FaFacebook />
                 Facebook
@@ -46,10 +46,10 @@ const Footer = () => {
             </div>
           </div>
           <hr />
-          <div className="px-3 grid grid-cols-2 lg:flex flex-wrap lg:gap-40 lg:items-center mt-5 text-white">
+          <div className="px-1 lg:px-3 grid grid-cols-2 lg:flex flex-wrap lg:gap-40 lg:items-center mt-5 text-white">
             <div>
               <h1 className="lg:text-2xl text-xl mb-5">Movie Categories</h1>
-              <div className="flex lg:gap-40 gap-10">
+              <div className="flex lg:gap-40 gap-5">
                 <ul>
                   <li>
                     <Link className="py-2" href="/movies/Action">
@@ -108,7 +108,7 @@ const Footer = () => {
             </div>
             <div>
               <h1 className="lg:text-2xl text-xl mb-5">TV Series</h1>
-              <div className="flex lg:gap-40 gap-10 text-white">
+              <div className="flex lg:gap-40 gap-5 text-white">
                 <ul>
                   <li>
                     <Link className="py-2" href="/">

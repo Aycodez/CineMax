@@ -48,15 +48,15 @@ const Register = () => {
   return (
     sessionStatus !== "authenticated" && (
       //   return  (
-      <div className="h-screen w-full flex items-center  justify-center overflow-hidden">
-        <div className="absolute -z-10 h-full w-full brightness-90">
+      <div className="h-screen w-full flex items-center  justify-center overflow-y-hidden">
+        <div className="absolute -z-10 w-full brightness-90">
           <img
             src="https://i.redd.it/zjgs096khv591.jpg"
-            className="w-full h-full object-cover lg:object-fill"
+            className="w-full h-screen object-cover lg:object-fill"
           />
         </div>
-        <div className="backdrop-blur-sm text-white bg-black/80 p-8 rounded shadow-md w-96">
-          <h2 className="text-4xl font-semibold mb-4">Sign Up</h2>
+        <div className="backdrop-blur-sm text-white bg-black/80 p-8 rounded shadow-md w-[22rem] lg:w-96">
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-4">Sign Up</h2>
           <form onSubmit={handleRegister}>
             <div className="mb-4 ">
               <div className="mb-4">

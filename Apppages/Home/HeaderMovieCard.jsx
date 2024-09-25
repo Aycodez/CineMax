@@ -14,13 +14,13 @@ const HeaderMovieCard = ({ movie }) => {
         />
       </div>
       <div className="wrapper mx-auto h-full flex justify-between gap-10 max-w-[1200px]">
-        <div className="pl-10 h-full flex-col flex pt-[12rem] lg:pt-[17rem] gap-4">
+        <div className="pl-10 h-full flex-col flex pt-[10rem] lg:pt-[17rem] gap-4">
           <div className="flex gap-2">
             <span className="border-2 border-red-600"></span>
             <p className="text-gray-400 lg:text-2xl">NEW RELEASES</p>
           </div>
 
-          <h1 className="text-5xl lg:text-[5rem]">{movie?.name}</h1>
+          <h1 className="text-4xl lg:text-[5rem]">{movie?.name}</h1>
 
           <div className="flex items-center gap-4 lg:text-xl">
             <span>
@@ -36,7 +36,7 @@ const HeaderMovieCard = ({ movie }) => {
               <ImYoutube size={20} />
               <p>WATCH TRAILER</p>
             </Link>
-            <button className="bg-transparent border-2 text-sm rounded-md font-semibold border-white py-3 px-4 lg:px-10">
+            <button className="bg-transparent border-2 text-sm rounded-md font-semibold border-white py-3 px-7 lg:px-10">
               +PLAYLIST
             </button>
           </div>
