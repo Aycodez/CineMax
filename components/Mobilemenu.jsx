@@ -71,7 +71,7 @@ const Mobilemenu = ({ setToggle }) => {
       {session ? (
         <button
           onClick={() => setToggle(false)}
-          className="pb-2"
+          className="border-b-2 border-gray-600 pb-4"
         >
           <Link
             href="/"
