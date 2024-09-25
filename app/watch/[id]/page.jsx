@@ -55,7 +55,7 @@ const MoviePage = ({ params }) => {
       </header>
       <main className="bg-[rgb(11,14,23)] overflow-hidden flex text-white px-5">
         <div className="lg:max-w-[1200px] lg:px-5 flex lg:flex-row flex-col w-full mx-auto">
-          <div className="lg:w-[20%] z-[999]">
+          <div className="lg:w-[20%] z-[99]">
             <div className="lg:w-[200px] lg:h-[300px] ml-10 lg:ml-0 size-[300px]">
               <Image
                 src={movie?.image}
@@ -89,7 +89,7 @@ const MoviePage = ({ params }) => {
                 <div className="flex items-center justify-center lg:justify-normal my-3 gap-4">
                   <p className="">{movie?.year}</p>
                   <p>{movie?.duration}</p>
-                  <p>{movie?.genre.join(',')}</p>
+                  <p className='text-wrap lg:text-nowrap'>{movie?.genre.join(',')}</p>
                 </div>
                 <p className="lg:w-[70%] lg:text-left text-center text-pretty">
                   {movie?.detail}
