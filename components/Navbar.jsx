@@ -57,14 +57,14 @@ const Navbar = () => {
           </div>
           <div className="flex gap-2 text-white">
             {session ? (
-              <button className="bg-transparent hover:bg-[gray] rounded-md font-semibold p-2 text-sm"
+              <button className="bg-transparent hover:bg-[gray] mr-3 rounded-md font-semibold p-2 text-sm"
                 onClick={() => signOut()}>SIGN OUT
               </button>
             ) : (
               <>
-                <Link className="bg-red-600 hover:bg-[red] text-sm font-semibold p-2 rounded-md"
+                <Link className="bg-red-600 hover:bg-[red] text-[0.7rem] font-semibold p-2 rounded-md"
                   href="/login">SIGN IN</Link>
-                <Link className="bg-transparent hover:bg-[gray] rounded-md font-semibold py-2 text-sm "
+                <Link className="bg-transparent mr-3 hover:bg-[gray] rounded-md font-semibold py-2 text-[0.7rem] "
                   href="/register">REGISTER
                 </Link>
               </>
