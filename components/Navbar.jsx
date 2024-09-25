@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {toggle && (
             <div onClick={() => setToggle(false)}
-              className="mobile-menu mt-[40rem] h-screen pt-[20rem] text-red-500 z-40 lg:hidden backdrop-blur-md fixed ml-[-50px] w-full py-4
+              className="mobile-menu mt-[40rem] h-screen pt-[10rem] text-red-500 z-40 lg:hidden backdrop-blur-md fixed ml-[-50px] w-full py-4
                         bg-white/80 transition-all duration-1000 ease-in-out"
             >
               <Mobilemenu setToggle={setToggle} />
