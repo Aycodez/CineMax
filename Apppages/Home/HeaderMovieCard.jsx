@@ -22,13 +22,13 @@ const HeaderMovieCard = ({ movie }) => {
 
           <h1 className="text-4xl lg:text-[5rem]">{movie?.name}</h1>
 
-          <div className="flex items-center gap-4 lg:text-xl">
+          <div className="flex lg:mt-5 items-center gap-4 lg:text-xl">
             <span>
               {movie?.year} | {movie?.genre.join(", ")} | {movie?.duration}
             </span>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 mt-2">
             <Link
               href={`/watch/${movie?._id}`}
               className="bg-[red] py-3 px-3 text-sm lg:px-6 gap-3 flex items-center rounded-md"
