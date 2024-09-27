@@ -124,7 +124,7 @@ const UpdateMovie = ({ params }) => {
               </div>
 
             </div>
-            <div className="mb-4 w-1/2">
+            <div className="mb-4 w-full lg:w-1/2">
               <div className="mb-4">
                 <label htmlFor="username" className='block text-sm  mb-2'>Background Poster</label>
                 <input type="text" value={movieData.backgroundImage}
