@@ -20,7 +20,7 @@ const HeaderMovieCard = ({ movie }) => {
             <p className="text-gray-400 lg:text-2xl">NEW RELEASES</p>
           </div>
 
-          <h1 className="text-4xl lg:text-[5rem]">{movie?.name}</h1>
+          <h1 className="text-4xl lg:text-[4.5rem]">{movie?.name}</h1>
 
           <div className="flex lg:mt-5 items-center gap-4 lg:text-xl">
             <span>
